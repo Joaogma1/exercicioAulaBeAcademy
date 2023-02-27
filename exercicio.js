@@ -11,13 +11,13 @@ let elevatorOperator = {
   floor: 0,
   people: [],
   //methodos do objeto
-  canJoin: function(person) { // verifica se pode entrar certa pessoa no elevador
-    if (this.people.length < this.peopleCapacity &&
-      this.people.reduce((accumulator, curValue) => accumulator + curValue.weight, 0) + person.weight < this.weightCapacity) { // Utilização de prototypes
+  canJoin: function(pessoa) { // verifica se pode entrar certa pessoa no elevador
+    if (this.pessoas.length < this.capacidadePessoas &&
+      this.pessoas.reduce((accumulator, curValue) => accumulator + curValue.peso, 0) + pessoa.peso < this.capacidadePeso) { // Utilização de prototypes
       return true
     }
     return false
-  },
+  },  
   advicePeopleToUnboarding: function() {
     for (var index = 0; index < this.people.length; index++) {
       if (this.people[index].stop === this.floor) {
